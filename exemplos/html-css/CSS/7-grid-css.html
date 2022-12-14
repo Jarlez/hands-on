@@ -1,0 +1,76 @@
+<!-- grid-template-rows -->
+<!-- grid-template-areas -->
+<!-- css Grid -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <style>
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          gap: 4px;
+        }
+
+        .col-2 {
+          grid-column: span 2;
+        }
+
+        .col-3 {
+          grid-column: span 3;
+        }
+
+        .col-4 {
+          grid-column: span 4;
+        }
+
+        .col-5 {
+          grid-column: span 5;
+        }
+
+        .col-12 {
+          grid-column: auto/span 12;
+        }
+
+        .f1 {
+          background-color: antiquewhite;
+        }
+
+        .f2 {
+          background-color: aqua;
+        }
+
+        .f3 {
+          background-color: bisque;
+        }
+
+        .f4 {
+          background-color: yellow;
+          max-width: ;
+        }
+
+        @media screen and (max-width: 600px ) {
+          .col-sm-12 {
+            grid-column: span 12;
+          }
+
+          .test {
+            display: none;
+          }
+        }
+
+      
+       
+      </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="col-4 col-sm-12 col-md-6 f1">1</div>
+      <div class="col-4 col-sm-12 col-md-6 f1">1</div>
+      <div class="col-5 f2">2</div>
+      <div class="col-5 f3">3</div>
+      <div class="col-12 f4">4</div>
+      
+      <div  class="test">Teste</div>
+    </div>
+  </body>
+</html>

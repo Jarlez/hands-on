@@ -1,0 +1,39 @@
+@import url("./header.css");
+@import url("./section.css");
+@import url("./button.css");
+@import url("./table.css");
+@import url("./subject.css");
+@import url("./tags.css");
+@import url("./modal.css");
+@import url("./footer.css");
+
+:root{
+    --fundo:#ededed;
+    --branco:#fff;
+    --preto:#000;
+    --azul: #2d4356;
+    --verde: #33cdac;
+    --verde-hover: #30b396;
+    --cinza: #4a6280;
+    --cinza-claro: #ababab;
+    --danger: #a40d0d;
+    --danger-hover: #cf2828;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+body {
+  background-color: var(--fundo);
+}
+
+main {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}

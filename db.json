@@ -1,0 +1,42 @@
+{
+  "alunos": [
+    {
+      "nome": "Jarles",
+      "matricula": "2aadwawdaaadawd234",
+      "curso": "Sistemas para internet",
+      "id": 8
+    },
+    {
+      "nome": "Jarles",
+      "matricula": "2aadwawdaaadawd234",
+      "curso": "Sistemas para internet",
+      "id": 9
+    }
+  ],
+  "disciplinas": [
+    {
+      "id": 1,
+      "nome": "Introdução a progração com scripts",
+      "cargaHoraria": "36h",
+      "professor": "Tiago Daniel Fernando Baptista",
+      "status": "Obrigatória",
+      "observacoes": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+      "id": 2,
+      "nome": "Fundamentos da Computação",
+      "cargaHoraria": "60h",
+      "professor": "Marcela Vera Mendes",
+      "status": "Obrigatória",
+      "observacoes": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    },
+    {
+      "id": 2,
+      "nome": "Linguagens de Marcação",
+      "cargaHoraria": "67h",
+      "professor": "Marcela Vera Mendes",
+      "status": "Obrigatória",
+      "observacoes": "Lorem ipsum dolor sit amet consectetur adipisicing."
+    }
+  ]
+}

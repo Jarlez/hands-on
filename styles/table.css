@@ -1,0 +1,22 @@
+.table-container {
+  overflow-y: auto;
+}
+.table {
+  width: 100%;
+  min-width: 800px;
+  background-color: var(--branco);
+  text-align: left;
+  border: 1px solid var(--cinza-claro);
+}
+
+.table th {
+  font-weight: 700;
+}
+.table th, .table td {
+  padding: 10px;
+  border: 1px solid var(--cinza-claro);
+}
+
+.table--stripe tr:nth-child(even){
+  background-color: #f2f2f2;
+}

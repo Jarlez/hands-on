@@ -1,0 +1,58 @@
+<!-- var -->
+<!-- let -->
+<!-- const -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script>
+      var nomeDaVariavelAntiga = 'Texto'
+      // console.log('nomeDaVariavelAntiga', nomeDaVariavelAntiga)
+      nomeDaVariavelAntiga = 'Novo Valor'
+      // console.log('tipoString', typeof(nomeDaVariavelAntiga))
+      nomeDaVariavelAntiga = 3
+      // console.log('tipoNumber', typeof(nomeDaVariavelAntiga));]
+      var nomeDaVariavelAntiga = 'Novo Texto Value' 
+
+      let nomeDaVariavel = 'texto'
+      // console.log('let', typeof(nomeDaVariavel))
+      nomeDaVariavel = 'Novo Valor';
+      // console.log(nomeDaVariavel);
+
+      {
+        var nomeDaVariavelAntiga = 'Texto'
+        console.log('nomeDaVariavelAntiga', nomeDaVariavelAntiga)
+        let getText = 'Pega uma texto';
+        console.log('getTextEscopo1', getText)
+      }
+
+      {
+        var nomeDaVariavelAntiga = 'Novo Texto'
+        console.log('nomeDaVariavelAntiga', nomeDaVariavelAntiga)
+        let getText = 'Pega um novo texto';
+        console.log('getTextEscopo2', getText)
+      } //var não respeita espoco
+
+      // console.log('ResultadoFinal', nomeDaVariavelAntiga)
+
+      // console.log('ResultadoFinal', getText) // não existe
+
+      const minhaConstante = 'Minha constante';
+
+      minhaConstante = 'Novo Valor'
+
+      {
+        const minhaConstante = 'Minha constante';
+      } // Posso repetir o nome da constante debtro do escpo da função
+
+      {
+        const minhaConstante = 'Minha constante';
+      }
+
+      console.log(minhaConstante)
+      
+
+    </script>
+  </head>
+  <body>      
+  </body>
+</html>

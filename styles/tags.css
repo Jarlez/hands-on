@@ -1,0 +1,15 @@
+.tag {
+  background-color: var(--cinza-claro);
+  color: var(--branco);
+  border-radius: 10px;
+  padding: 2px 8px;
+  font-size: 0.85em;
+}
+
+.tag--success {
+  background-color: var(--verde);
+}
+
+.tag--danger {
+  background-color: var(--danger);
+}

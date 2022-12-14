@@ -1,0 +1,33 @@
+.header {
+	background-color: var(--azul);
+	padding: 20px 15px 10px 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media screen and (min-width: 992px)  {
+	.header {
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+	}
+}
+
+.header__logo {
+	min-width: 235px;
+ 	height: 60px;
+	object-fit: contain;
+}
+
+.nav-header {
+	padding: 20px 0 10px;
+}
+
+.nav-header__link, .nav-header__link--buttom {
+color: var(--branco);
+}
+
+.nav-header__link {  
+	padding: 0 10px;
+}

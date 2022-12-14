@@ -1,0 +1,66 @@
+<!-- get -->
+<!-- post -->
+<!-- put -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+  </head>
+  <body>
+    <script>
+      //por padrao o metodo é GET
+      fetch('http://localhost:3000/alsunos', {
+        headers: {
+          'Access-Control-Allow-Origin': true, // Resolve problema de cors
+          'Content-Type': 'application/json' // Avisa que a API e do tipo JSON
+        }
+      })
+      .then((resp) => resp.json())
+      .then(data => console.log(data))
+      .catch((error) => console.log(error))
+
+      // http://localhost:3000/disciplinas?status=Opcional
+
+      // http://localhost:3000/disciplinas/3
+
+    //   fetch('http://localhost:3000/alunos',{
+    //     method:"POST",
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body:JSON.stringify(
+    //       {
+    //       nome: "Patrícia Marcela Sara Novaes",
+    //       matricula: "003",
+    //       curso: "Sistemas para internet"
+    //     }
+    //   )
+    // })
+    // .then(res=>res.json())
+    // .then(json=>console.log(json))
+
+    // fetch('http://localhost:3000/alunos/1',{
+    //     method:"PUT",
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body:JSON.stringify(
+    //       {
+    //       nome: "Patrícia Marcela Sara Novaes",
+    //       matricula: "003",
+    //       curso: "Sistemas para internet"
+    //     }
+    //   )
+    // })
+    // .then(res=>res.json())
+    // .then(json=>console.log(json))
+
+
+    // fetch('http://localhost:3000/alunos/1', {
+    //     method:"DELETE"
+    // })
+    // .then(res=>res.json())
+    // .then(json=>console.log(json))
+    
+    </script>
+  </body>
+</html>

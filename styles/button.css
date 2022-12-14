@@ -1,0 +1,59 @@
+.button {
+  border: none;
+  background-color: var(--cinza-claro);
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  transition: 0.3s;
+}
+
+.button--success {
+  background-color: var(--verde);
+  color: var(--cinza);
+}
+
+.button--success:hover {
+  background-color: var(--verde-hover);
+}
+
+.button--danger {
+  background-color: var(--danger);
+  color: var(--branco);
+}
+
+.button--danger:hover {
+  background-color: var(--danger-hover);
+}
+
+
+
+
+.button-disciplina {
+  border: none;
+  background-color: var(--cinza-claro);
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.button-disciplina:hover {
+  transition: 0.3s;
+  background-color: var(--verde-hover);
+}
+
+.button-disciplina {
+  background-color: var(--verde);
+  color: var(--cinza);
+}
+

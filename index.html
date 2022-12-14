@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <title>Sistema de Controle Acadêmico</title>
+
+  <link rel='shortlink' href='https://www.unipe.edu.br/?p=834' />
+  <link rel="icon" href="https://www.unipe.edu.br/wp-content/uploads/2019/12/favicom_unipe_57X57.png" sizes="32x32" />
+  <link rel="icon" href="https://www.unipe.edu.br/wp-content/uploads/2019/12/favicom_unipe_57X57.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="https://www.unipe.edu.br/wp-content/uploads/2019/12/favicom_unipe_57X57.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/all.css" />
+</head>
+
+<body>
+  <header class="header">
+    <!-- BEM
+       Block - element - modify -->
+    <img src="./assets/cse-marcas-unipe_50anos_va1.svg" alt="Sistema de Controle Acadêmico" class="header__logo" />
+    <nav class="nav-header">
+      <a href="#" title="Página principal" class="nav-header__link">Principal</a>
+      <a href="#" title="Alunos" class="nav-header__link">Alunos</a>
+      <a href="#" title="Disciplina" class="nav-header__link">Disciplina</a>
+      <a href="#" title="Sair" class="button button--danger">Sair</a>
+    </nav>
+  </header>
+  <main>
+    <section class="section-wrapper">
+      <header class="section-header">
+        <h1 class="section-header__title">Alunos</h1>
+        <button class="button button--success" onclick="createStudent()">Novo Aluno</button>
+      </header>
+      <div class="table-container">
+        <table class="table table--stripe" id="student-table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Matrícula</th>
+              <th>Cursos</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <dialog class="modal" id="student-modal">
+        <div class="modal__container">
+          <header class="modal__header">
+            <h3 id="student-modal-title">Novo aluno</h3>
+          </header>
+          <form id="student-form" class="modal__form">
+            <fieldset>
+              <label for="nome">Nome</label>
+              <input type="text" placeholder="Nome do aluno..." name="nome" id="nome">
+              <label>Matrícula</label>
+              <input type="text" placeholder="Matrícula" id="matricula" name="matricula">
+              <label>Curso</label>
+              <select name="curso" id="curso">
+                <option value="">selecione</option>
+                <option value="Sistemas para internet">Sistemas para internet</option>
+                <option value="Redes">Redes</option>
+              </select>
+            </fieldset>
+            <div class="modal__form-buttons">
+              <button class="button button--danger" type="reset" onclick="closeStudentModal()">
+                Cancelar
+              </button>
+              <button class="button button--success" type="submit" id="save-student">Criar</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+    </section>
+
+
+
+
+
+
+    <section class="section-wrapper">
+      <header class="section-header">
+        <h1 class="section-header__title">Disciplina</h1>
+        <button class="button-disciplina" onclick="createSubject()">Nova Disciplina</button>
+      </header>
+
+      <div class="subject-list">
+        <div class="subject-card" id="subject-card_list">
+          <h3 class="subject-card__title">Nome da disciplina</h3>
+          <hr />
+          <ul class="subject-card__list">
+            <li>carga horária: 16h</li>
+            <li>Professor: Pessoa da Silva</li>
+            <li>Status <span class="tag tag--danger">Obrigatória</span></li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="subject-card">
+          <h3 class="subject-card__title">Nome da disciplina</h3>
+          <hr />
+          <ul class="subject-card__list">
+            <li>carga horária: 16h</li>
+            <li>Professor: Pessoa da Silva</li>
+            <li>Status <span class="tag tag--success">Opcional</span></li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        </div>
+        <div class="subject-card">
+          <h3 class="subject-card__title">Nome da disciplina</h3>
+          <hr />
+          <ul class="subject-card__list">
+            <li>carga horária: 16h</li>
+            <li>Professor: Pessoa da Silva</li>
+            <li>Status <span class="tag tag--success">Opcional</span></li>
+          </ul>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+      </div>
+
+      <dialog class="modal" id="subject-modal">
+        <div class="modal__container">
+          <header class="modal__header">
+            <h3 id="subject-modal-title">Nova Disciplina</h3>
+          </header>
+          <form id="subject-form" class="modal__form">
+            <fieldset>
+              <label for="nome">Nome da disciplina</label>
+              <input type="text" placeholder="Digite o nome da disciplina" name="nome" id="nome">
+              <label>Carga horária</label>
+              <input type="text" placeholder="Digite a carga horária total " id="carga" name="carga">
+              <label>Nome do professor</label>
+              <input type="text" placeholder="Digite o nome do professor " id="professor" name="professor">
+              <label>Selecione o Status</label>
+              <select name="curso" id="curso">
+                <option value="">selecione</option>
+                <option value="Sistemas para internet">Obrigatória</option>
+                <option value="Redes">Opcional</option>
+              </select>
+              <label for="msg">Mensagem:</label>
+              <textarea style="resize: vertical;" id="msg" placeholder="Digite as observações sobre a disciplina "
+                name="usuario_msg"></textarea>
+            </fieldset>
+            <div class="modal__form-buttons">
+              <button class="button button--danger" type="reset" onclick="closeSubjectModal()">
+                Cancelar
+              </button>
+              <button class="button button--success" type="submit" id="save-student">Criar</button>
+            </div>
+          </form>
+        </div>
+      </dialog>
+    </section>
+
+
+  </main>
+  <footer class="footer">
+    <span>Lorem, ipsum dolor sit tenetur voluptatem quod!</span>
+  </footer>
+  <script src="./javaScript/scripts.js"></script>
+</body>
+
+</html>

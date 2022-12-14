@@ -1,0 +1,48 @@
+<!-- if -->
+<!-- if else -->
+<!-- ternário -->
+<!-- boas práticas -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script>
+      const tioPessoa = 'professor'
+      const tipoAluno = 'aluno'
+      const tipoProfessor = 'professor'
+      let pessoa
+      pessoa = 'Nélio'
+     
+      const test  = () => {
+        if( tioPessoa === tipoAluno) {
+          console.log('Sou um aluno')
+          return 'Sou um aluno'
+        }
+        
+        if( tioPessoa === tipoProfessor) {
+          console.log('Sou um Professor')
+          return 'Sou um Professor'
+        }
+        
+        console.log('Sou um Diretor')
+        return 'Sou um Diretor'
+      }
+
+      test();
+
+      //ternario
+      // is, has, can = esperar um booleno
+      const isStudent = true
+      const cargo =  isStudent ? 'eu sou um estudante' : 'eu sou um professor';
+      console.log('cargo', cargo);
+
+      //Nullish coalescing 
+      const data =  {nome: 'Nélio', endereco: 'Nao definido'}
+      const getData = data ?? {nome: 'Nao definido', endereco: 'Nao definido'}
+      //Se o valor do data carrega valor pre-definido
+      console.log(getData.nome)
+      
+    </script>
+  </head>
+  <body>      
+  </body>
+</html>

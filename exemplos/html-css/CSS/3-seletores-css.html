@@ -1,0 +1,105 @@
+<!-- Seletor tag -->
+<!-- Seletor classe -->
+<!-- Seletor id -->
+<!-- hierarquia de seletores (sobreposição) -->
+<!-- combinando tipo de seletores -->
+<!-- Padrões úteis de seletores -->
+<!-- Reaproveitamento de código -->
+<!-- CSS global -->
+<!-- Uso do important -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <style>
+      html, body {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px;
+        background-color: beige;
+      }
+      div {
+        width: 100px;
+      
+        background-color: aqua!important;
+        color: black;
+      }
+
+      p, span, small, div {
+        /* font-size: 40px; */
+      }
+      
+
+      /* div p {
+        font-size: 40px;
+        color: bisque;
+      } */
+
+      /* div > span {
+        font-size: 40px;
+        color: bisque;
+      } */
+
+      div span:first-child {
+        font-size: 40px;
+        color: bisque;
+      }
+
+      .classe {
+        background-color: red;
+        font-style: italic;
+      }
+
+      #id-div {
+        font-size: 16px;
+        font-weight: bold;
+        background-color: brown;
+      }
+
+      .nome-da-classe {
+        font-size: 32px;
+      }
+
+      .cor-do-texto {
+        color: brown;
+      }
+
+    .cor-do-texto-2 {
+        color: aquamarine;
+      }
+      
+      #nome-do-id {
+        background-color: blueviolet;
+      }
+
+      h1, h2, h3 {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      h1 {
+        font-size: 15px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="classe-title">H1</h1>
+    <h2>h3</h2>
+    <h3>H3</h3>
+    <p>Texto</p>
+    <span>span</span></p>
+    <div>
+      <p>Texto</p>
+      <span>span</span></p>
+      <span>Texto3</span>
+    </div>
+    <p>ABC</p>
+    <!-- <div id="id-div" class="classe" style="background-color: blueviolet;">div</div>  -->
+    <p class="nome-da-classe cor-do-texto">Texto</p>
+    <p class="nome-da-classe cor-do-texto-2">Texto2</p>
+    <p class="nome-da-classe cor-do-texto">Texto3</p>   
+    <div id="nome-do-id" class="cor-do-texto-2">Divisao</div>  
+  </body>
+</html>

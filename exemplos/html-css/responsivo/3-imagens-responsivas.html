@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <title>Imagens responsivas</title>
+  <style>
+    .wrapper {
+        border: 1px solid #000;
+        margin-bottom: 10px;
+        background-color: #ccc;
+        height: 200px;
+    }
+
+    .wrapper div {
+        border: 1px solid red;
+    }
+
+    .wrapper img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div>
+        <img src="./assets/1280x50.jpg" />
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div>
+        <img src="./assets/300x300.jpg" />
+    </div>
+  </div>
+</body>
+</html>

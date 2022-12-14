@@ -1,0 +1,65 @@
+<!-- static -->
+<!-- relaive  -->
+<!-- absolute -->
+<!-- fixed -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <style>
+      html, body {
+        height: 100%;
+      }
+      .static {
+        position: static;
+      }
+      
+      .bg-color1 {
+        background-color: aquamarine;
+      }
+
+      .bg-color2 {
+        background-color:bisque;
+        border: 1px solid red;
+      }
+
+      div {
+        width: 200px;
+        height: 200px;
+      }
+
+      .relative {
+        position: relative;
+        top: 50px;
+        left: 10px;
+        bottom: 10px;
+      }
+
+      .absolute {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      .fixed {
+        position: fixed;
+        right: 0;
+      }
+      
+    </style>
+  </head>
+  <body>
+  
+    <div class="fixed">
+      fixed
+    </div>
+    <div class="relative bg-color1">
+      <div class="absolute">
+        relative
+        </div>
+    </div>
+
+    <div class="bg-color2">
+      relative
+    </div>
+  </body>
+</html>

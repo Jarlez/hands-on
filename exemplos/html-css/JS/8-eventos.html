@@ -1,0 +1,78 @@
+<!-- click -->
+<!-- focus -->
+<!-- blur -->
+<!-- change -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <style>
+      .ativo {
+        border: 1px solid green;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="t1" class="titulo" >Meu cabeçalho</h1>
+    <a href="#" id="link" onclick="clicaBotao()">Meu link</a>
+    
+    <input type="text" value="" id="input-text" >
+    <div>
+      <button id="btn" onclick="clicaBotao()">Botão</button>
+    </div>
+    <select>
+      <option value="" >Selecione sua profissão</option>
+      <option value="1">Front-end</option>
+      <option value="2">back-end</option>
+      <option value="3">Devops</option>
+    </select>
+
+    <div id="result">
+    </div>
+
+    <footer> 
+      <span>opa</span>
+      <div>epa</div>
+    </footer>
+    <script>
+      const botao = document.querySelector("#btn")
+      console.log(botao)
+      // botao.addEventListener('click', () => {
+      //   alert('fui clicado')
+      // })
+
+      const clicaBotao = () => alert('fui clicado');
+
+      // botao.addEventListener('focus', () => {
+      //   alert('focus')
+      // })
+
+      var input = document.querySelector("#input-text")
+      
+      input.addEventListener('focus', () => {
+        input.classList.add('ativo')
+      })
+
+      input.onclick = () => {
+       return alert('aa')
+      }
+
+      input.addEventListener('blur', () => {
+        input.classList.remove('ativo')
+      })
+
+      const select = document.querySelector('select')
+
+      select.addEventListener('change', (event) => {
+        console.log(event)
+      })
+
+      input.addEventListener('change' , (event) => {
+        console.log(event.target.value)
+      })
+
+      
+
+    </script>
+  </body>
+</html>

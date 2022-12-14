@@ -1,0 +1,50 @@
+<!-- pegar elemento pela tag -->
+<!-- pegar elemento pelo ID -->
+<!-- pegar elemento pela class -->
+<!-- pegar elemento querySelector -->
+<!-- pegar elemento querySelectorAll -->
+<!-- criar um p -->
+<!-- adicionar texto -->
+<!-- adicionar classe -->
+<!-- adicionar id -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    
+  </head>
+  <body>
+    <h1 id="t1" class="titulo" >Meu cabeçalho</h1>
+    <h2  class="titulo" >Meu cabeçalho</h2>
+    <a href="#" id="link">Meu link</a>
+    <footer> 
+      <span>opa</span>
+      <div>epa</div>
+    </footer> 
+    <script>
+      const tag = document.getElementsByTagName('h1');
+      const id = document.getElementById('t1')
+      const classe = document.getElementsByClassName('titulo')
+      const querySelector = document.querySelector('.titulo')
+      const querySelectorAll = document.querySelectorAll('.titulo')
+      // console.log(querySelector)
+
+      const pegaTexto = document.querySelector('#t1')
+      console.log(pegaTexto.textContent)
+      console.log(pegaTexto.id)
+      pegaTexto.classList.add('nova-classe')
+      console.log(pegaTexto)
+      pegaTexto.classList.remove('nova-classe')
+      pegaTexto.setAttribute('title', 'Meu cabeçalho') //adiciona atributo
+      pegaTexto.removeAttribute('title') //remove atributo
+
+      const paragrafo = document.createElement('p')
+      paragrafo.textContent = 'Meu parágrafo'
+      paragrafo.classList.add('paragrafo')
+      paragrafo.id = 'texto'
+      const body = document.querySelector('body')
+      body.appendChild(paragrafo)
+     
+      console.log(body)
+    </script>   
+  </body>
+</html>

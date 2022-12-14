@@ -1,0 +1,118 @@
+<!-- Array -->
+<!-- acessando valores do Array -->
+<!-- acessando valores do objeto -->
+<!-- array de objetos -->
+<!-- destructuring -->
+<!-- destructuring pulando itens -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script>
+      // Arrays
+      const func = () => 'função'
+      const foods = ['Pizza', 'Lansanha', 'Cachorro quente', 'coca'];
+      const arr = ['string', true, 14, func]
+      console.log(arr)
+      console.log('comida', foods)
+      const comidaIndex1 = foods[0]
+      const comidaIndex2 = foods[1]
+      console.log('comidaIndice1', comidaIndex1);
+      console.log('comidaIndice2', comidaIndex2);
+    // Objeto
+    const foodObject = {
+      localDeVenda : ['Eat Green', 'Restaurante Fit'],
+      nome: 'Pizza',
+    //chave: valor
+      tipo: 'fit',
+      observacao: 'É bom para quem está fazendo dieta',
+      isLowCarb: true,
+      cal: 5
+    } //chave e valor
+    console.log(foodObject.nome)
+    console.log(foodObject.isLowCarb)
+
+    // array de objetos
+
+    const foodChain = [
+      {
+        nome: 'Pizza',
+        tipo: 'fit',
+        observacao: 'É bom para quem está fazendo dieta',
+        isLowCarb: true,
+        cal: 5,
+        func: () => 'Função', 
+      },
+      {
+        nome: 'Lasanha',
+        tipo: 'fit',
+        observacao: 'É bom para quem está fazendo dieta',
+        isLowCarb: true,
+        cal: 10
+      },
+      
+      {
+        nome: 'Macarrão a Bolonhesa',
+        tipo: 'fit',
+        observacao: 'É bom para quem está fazendo dieta',
+        isLowCarb: true,
+        cal: 8
+      }
+    ]
+
+    console.log('foodChain', foodChain);
+
+    const newFoodChain = [
+      ...foodChain, // spread operator -  copiando o array de objetos foodChain
+      {
+        nome: 'Lasanha Bolonhesa',
+        tipo: 'fit',
+        observacao: 'É bom para quem está fazendo dieta',
+        isLowCarb: true,
+        cal: 8
+      }
+    ]
+    
+    const lowCarb = {
+      nome: 'Kibe',
+      cal: 10,
+      preco: 'R$20'
+    }
+
+    const newLowCarb = {
+      ...lowCarb,
+      preco: 'R$15,00',
+      observacao: 'Observação',
+    }
+    console.log('lowCarb', lowCarb)
+    console.log('newLowCarb', newLowCarb)
+
+    console.log('newFoodChain', newFoodChain)
+
+    const junkFood = [
+      {
+        localDeVenda: ['MacDoinalds', 'Buguer King'],
+        verdes : {
+          nome: 'alface',
+          tipo: 'fast food',
+          isLowCarb: false,
+          cal: 10000
+        }
+      }
+    ]
+
+    // destructuring  0      1        2       3
+    const data = ['José', 'Maria', 'João', 'Joaquina'];
+
+    data.push('Nova pessa');
+
+    // pulando indices
+    const [, , , joaquina] = data
+
+    console.log(joaquina)
+
+    console.log(data)
+    </script>
+  </head>
+  <body>      
+  </body>
+</html>

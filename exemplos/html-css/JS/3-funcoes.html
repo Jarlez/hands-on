@@ -1,0 +1,76 @@
+<!-- como criar uma funcao -->
+<!-- armazenando o resultado da funcao em uma constante -->
+<!-- funcao de callback  -->
+<!-- funcao anonima  -->
+<!-- arrow function  -->
+<!-- function and destructuring  -->
+<!-- template-string -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script>
+      //como criar uma funcao
+      function nomeDafuncao() {
+        return 'eu sou uma função'
+      }
+
+      function soma(valor1, valor2) {
+        console.log(valor1 + valor2)
+        return valor1 + valor2
+      }
+
+      soma(2, 3);
+
+      function nomeSobreNome (nome, sobrenome) {
+        console.log( nome + sobrenome)
+      }
+      nomeDafuncao('Pessoa');
+      nomeSobreNome('Nélio', 'Frazao')
+
+      // armazenando o resultado da funcao em uma constant
+      const nome =  nomeDafuncao('Pessoa')
+
+      //  funcao anonima 
+      const valor = function() {
+        console.log('função anonima')
+        return 'função anonima'
+      }
+      console.log(valor)
+
+      {
+        function test() {
+          console.log('test')
+        }
+
+        const nomeDafuncao2 = (param1, param2) => {
+          console.log(param1 + param2)
+          console.log('aquiiiiiiiiiiiii')
+          return param1 + param2
+        }
+
+        //retorn implícito
+        const nomeDafuncao3 = (param1, param2) => console.log(param1 + param2)
+        // nomeDafuncao(1 , '2')
+      } // final de escopo
+
+      {
+        test();
+        // nomeDafuncao2(1 , '2')
+
+        // recen
+        const nomeDafuncaoDesc = ({nome, sobrenome, idade}) => {
+          //template string
+          console.log(`Meu nome é: ' ${nome} ' Meu sobrenome é: ' ${sobrenome} ' Minha idade é: '  ${idade}`)
+        }
+
+        nomeDafuncaoDesc({
+          idade: '26',
+          nome: 'Nélio', 
+          sobrenome: 'Frazão', 
+        })
+      }
+    </script>
+  </head>
+  <body>      
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!-- 
+    flex-direction;
+    justify-content
+    align-items
+    wrap
+ -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<title>Flex</title>
+        <style>
+            .flex-container-row, .flex-container-column {
+                border: 1px solid red;
+                height: 300px;
+            }
+
+            .item1, .item2, .item3 {
+                width: 50px;
+            }
+
+            .item1, .item3 {
+              height: 50px;
+                
+            }
+
+            .item1 {
+                border: 1px solid blue;  
+            }
+
+            .item2 {
+                border: 1px solid green;
+                height: 20px;
+                font-size: 8px;
+            }
+
+            .item3 {
+                border: 1px solid purple;  
+            }
+
+            .flex-container-row {
+                display: flex;
+                /* row é o valor padrão do direction */
+                flex-direction: row;
+                /* flex-start é o valor padrão do justify-content */
+                justify-content: center;
+                /* flex-start é o valor padrão do align-items */
+                /* valores 
+                    flex-start
+                    flex-end
+                    center
+                    baseline
+                */
+                align-items: flex-start;
+            }
+
+            .flex-container-column {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+        </style>
+	</head>
+
+	<body>
+    <!-- linha -->
+    <div class="flex-container-row">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+    </div>
+
+    <!-- coluna -->
+    <div class="flex-container-column">
+      <div class="item1">1</div>
+      <div class="item2">2</div>
+      <div class="item3">3</div>
+  </div>
+	</body>
+</html>

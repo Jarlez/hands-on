@@ -1,0 +1,51 @@
+<!-- map -->
+<!-- filter -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <script>
+        const arr = [
+          {
+            name: 'Pessoa',
+            age: 22
+          },
+
+          {
+            name: 'Pessoa 2',
+            age: 21
+          },
+        ]
+
+        // console.log(arr)
+
+        const pegaPessoa = (nome, idade) => 
+          console.log(`Meu nome é ${nome} e minha idade é ${idade}`)
+
+       const myArr = arr.map((pessoa) => {
+          // console.log(pessoa.name)
+          // console.log(pessoa.age)
+          pegaPessoa(pessoa.name, pessoa.age)
+          return {
+            nome: pessoa.name,
+            idade: pessoa.age
+          }
+        })
+        // console.log(myArr)
+      
+        const filerPessoa = arr.filter((pessoa) => pessoa.age === 21)
+
+        const filerPessoa21 = arr.filter((pessoa) => pessoa.age === 21)
+        .map((pessoa21) => {
+          return {
+            nome: pessoa21.name,
+            idade: pessoa21.age
+          }
+        })
+
+        console.log(filerPessoa21)
+
+      </script>
+  </head>
+  <body>      
+  </body>
+</html>

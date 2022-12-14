@@ -1,0 +1,13 @@
+.section-wrapper {
+    padding: 40px 0 30px 0;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.section-header__title {
+  font-size: 2em;
+}
