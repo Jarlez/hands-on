@@ -1,13 +1,8 @@
-// studentModal.open = true // funciona para abrir o dialog
-// studentModal.open = false// funciona para fechar o dialog
-// studentModal.setAttribute('open', true) // funciona para abrir o dialog
-// studentModal.setAttribute('open', false) // não funciona para fechar o dialog
-// studentModal.removeAttribute('open') funciona para fechar o dialog
-// studentModal.showModal() // funciona para abrir o dialog
-// studentModal.close() funciona para fechar o dialog
-/**
 
- 
+/**
+ * Alunos
+ */
+
 const studentModal = document.querySelector('#student-modal');
 const studentForm = document.querySelector('#student-form');
 const studentModalTitle = document.querySelector('#student-modal-title')
@@ -124,7 +119,9 @@ const loadStudentTable = () => {
 
 loadStudentTable();
 
-
+/**
+ * Disciplinas
+ */
 
 const subjectModal = document.querySelector('#subject-modal');
 const subjectForm = document.querySelector('#subject-form');
@@ -132,20 +129,19 @@ const subjectModalTitle = document.querySelector('#subject-modal-title')
 const saveSubjectButton = document.querySelector('#save-subject')
 
 /**
- * Função responsável abrir o modal de estudante
+ * Função responsável abrir o modal de disciplina
  */
 const openSubjectModal = () => subjectModal.showModal();
 
 /**
- * Função responsável fechar o modal de estudante
+ * Função responsável fechar o modal de disciplina
  */
 const closeSubjectModal = () => subjectModal.close();
 
 /**
- * Função responsável abrir o modal de aluno e salvar um novo aluno
+ * Função responsável abrir o modal de disciplina e salvar uma nova disciplina
  * 
  */
-
 const createSubject = () => {
   openSubjectModal();
   subjectModalTitle.textContent = 'Nova disciplina';
@@ -154,9 +150,8 @@ const createSubject = () => {
 }
 
 
-
 /**
- * Função responsável por criar linhas na tabela student-table
+ * Função responsável por criar card e mostrar informações de cada disciplina
  * @param {id} string
  * @param {nome} string
  * @param {cargaHoraria} string
@@ -164,24 +159,29 @@ const createSubject = () => {
  @param {status} string
  @param {observacoes} string
  */
-const createSubjectTableRow = (id, nome, cargaHoraria, professor, status, observacoes) => {
-  const subjectCard = document.querySelector('#subject-card_list tbody')
-  const card = document.createElement('ul');
+const createSubjectModal = (id, nome, cargaHoraria, professor, status, observacoes) => {
+  const subjectCard = document.querySelector('.subject-list')
+  const card = document.createElement('div');
+  card.setAttribute('class', 'subject-card')
+  const statusClass = status == "Opcional" ? "tag tag--success" : "tag tag--danger";
   card.innerHTML = ` 
-  <h3>${nome}</h3>
-  <li>${cargaHoraria}</li>
-  <li>${professor}</li>
-  <li>${status}</li>
+  <h3 class="subject-card__title">${nome}</h3>
+<hr/>
+<ul class="subject-card__list" >
+  <li>Carga horária: ${cargaHoraria}</li>
+  <li>Professor: ${professor}</li>
+  <li>Status da disciplina: <span class="${statusClass}">${status}</span></li>
+</ul>
   <p>${observacoes}</p>
-  <li align="center">
-    <button class="button button--danger" onclick=deleteSubjectTable(${id})>Apagar</button>
-    <button class="button button--success" onclick="editSubjectModal(${id})">Editar</button>
-  </li>`;
+<div class="button-js">
+ <button class="button button--danger" onclick=deleteSubjectModal(${id})>Apagar</button>
+  <button  class="button button--success" onclick="editSubjectModal(${id})">Editar</button>
+  </div>`;
   subjectCard.appendChild(card);
 }
 
 /**
- * Função responsável salvar os dados de um estudante
+ * Função responsável salvar os dados de uma disciplina
  * @param {url} string
  * @param {method} string
  */
@@ -202,3 +202,56 @@ const saveSubjectData = (url, method) => {
 
   });
 }
+/**
+ * Função responsável por carregar os dados de disciplinas
+ */
+const loadSubjectModal = () => {
+  fetch('http://localhost:3000/disciplinas')
+    .then(resp => resp.json())
+    .then(data => {
+      data.forEach(subject => {
+        createSubjectModal(subject.id, subject.nome, subject.carga, subject.professor, subject.status, subject.usuario_msg)
+      })
+    }).catch((error) => {
+      alert('ocorreu um erro tente mais tarde')
+      console.error(error);
+    });
+};
+
+loadSubjectModal();
+
+/**
+ * Função responsável por apagar dados de uma disciplina
+ * @param {subjectId} string
+ */
+const deleteSubjectModal = async (subjectId) =>
+  fetch(`http://localhost:3000/disciplinas/${subjectId}`, { method: 'DELETE' });
+
+/**
+ * Função responsável abrir o modal de edição e carregar os dados de uma disciplina e salvar os dados da edição
+ * @param {subjectId} string
+ */
+const editSubjectModal = async (subjectId) => {
+  const url = `http://localhost:3000/disciplinas/${subjectId}`;
+  openSubjectModal();
+  subjectModalTitle.textContent = 'Editar disciplinas';
+  saveSubjectButton.textContent = 'Editar';
+  const nome = document.querySelector("#nomed");
+  const carga = document.querySelector("#carga");
+  const professor = document.querySelector("#professor");
+  const usuario_msg = document.querySelector("#msg");
+  const status = document.querySelector("#status");
+  fetch(url)
+    .then(resp => resp.json())
+    .then(data => {
+      nome.value = data.nome
+      carga.value = data.carga
+      professor.value = data.professor
+      status.value = data.status
+      usuario_msg.value = data.usuario_msg
+
+
+    })
+  saveSubjectData(url, 'PUT');
+
+};

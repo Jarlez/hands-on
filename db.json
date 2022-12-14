@@ -1,42 +1,29 @@
 {
-  "alunos": [
-    {
-      "nome": "Jarles",
-      "matricula": "2aadwawdaaadawd234",
-      "curso": "Sistemas para internet",
-      "id": 8
-    },
-    {
-      "nome": "Jarles",
-      "matricula": "2aadwawdaaadawd234",
-      "curso": "Sistemas para internet",
-      "id": 9
-    }
-  ],
+  "alunos": [],
   "disciplinas": [
     {
-      "id": 1,
-      "nome": "Introdução a progração com scripts",
-      "cargaHoraria": "36h",
-      "professor": "Tiago Daniel Fernando Baptista",
+      "nome": "Programação com scripts",
+      "carga": "36h",
+      "professor": "Tiago Daniel Fernando",
       "status": "Obrigatória",
-      "observacoes": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      "usuario_msg": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "Fundamentos da Computação",
-      "cargaHoraria": "60h",
-      "professor": "Marcela Vera Mendes",
-      "status": "Obrigatória",
-      "observacoes": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+      "nome": "Front-end",
+      "carga": "30h",
+      "professor": "Maria Bezerra dos Santos",
+      "status": "Opcional",
+      "usuario_msg": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "id": 2
     },
     {
-      "id": 2,
-      "nome": "Linguagens de Marcação",
-      "cargaHoraria": "67h",
-      "professor": "Marcela Vera Mendes",
+      "nome": "Back-end",
+      "carga": "30h",
+      "professor": "Sergio Flores",
       "status": "Obrigatória",
-      "observacoes": "Lorem ipsum dolor sit amet consectetur adipisicing."
+      "usuario_msg": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      "id": 3
     }
   ]
 }

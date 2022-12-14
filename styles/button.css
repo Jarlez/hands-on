@@ -32,9 +32,6 @@
   background-color: var(--danger-hover);
 }
 
-
-
-
 .button-disciplina {
   border: none;
   background-color: var(--cinza-claro);
@@ -57,3 +54,7 @@
   color: var(--cinza);
 }
 
+.button-js {
+  float: right;
+  padding: 20px 0;
+}
